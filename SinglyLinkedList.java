@@ -55,6 +55,21 @@ class Main{
             }
         }
     }
+    public void insertsorted(int a){
+        SinglyLinkedList temp=head;
+        if(head==null){
+            System.out.println("List is Empty");
+            return;
+        }
+        else{
+            while(temp!=null){
+                if(temp.value>a){
+                    temp.next.value=a;
+                }
+                temp=temp.next;
+            }
+        }
+    }
     public void delete(int data){
         SinglyLinkedList curr = head.next;
         SinglyLinkedList prev = head;
